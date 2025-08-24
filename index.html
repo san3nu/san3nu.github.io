@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="5; url=https://lamstech.vercel.app">
+<meta http-equiv="refresh" content="3; url=https://lamstech.vercel.app">
 <title>Mengalihkan ke LamsTech...</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -66,22 +66,20 @@
 <script>
   const target="https://lamstech.vercel.app";
   const fill=document.getElementById("fill");
-  const shine=document.querySelector(".shine");
   let t=0;
   const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
   const step=ts=>{
-    t=Math.min(1,(performance.now()-start)/900);
+    t=Math.min(1,(performance.now()-start)/2600);
     fill.style.width=(ease(t)*100).toFixed(2)+"%";
     if(t<1) requestAnimationFrame(step);
   };
   const start=performance.now();
   requestAnimationFrame(step);
   const go=()=>{try{location.replace(target)}catch(e){location.href=target}};
-  setTimeout(go,950);
+  setTimeout(go,2800);
   document.getElementById("cta").addEventListener("click",e=>{e.preventDefault();go()});
   document.addEventListener("visibilitychange",()=>{if(!document.hidden) go()});
   window.addEventListener("pointermove",e=>{
-    const r=e.currentTarget.documentElement.getBoundingClientRect();
     document.documentElement.style.setProperty("--mx",e.clientX+"px");
     document.documentElement.style.setProperty("--my",e.clientY+"px");
   },{passive:true});
