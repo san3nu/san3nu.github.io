@@ -1,19 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="5; url=https://lamstech.vercel.app">
-  <title>Redirecting...</title>
-  <script>
-    window.onload = function() {
-      window.location.href = "https://lamstech.vercel.app";
-    }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="5; url=https://lamstech.vercel.app">
+<title>Mengalihkan ke LamsTech...</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg1:#0f172a;--bg2:#111827;--acc:#22d3ee;--acc2:#a78bfa;--txt:#e5e7eb;--muted:#9ca3af}
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 1200px at 80% 20%,#1f2937 0%,transparent 60%),conic-gradient(from 220deg at 50% 50%,rgba(34,211,238,.15),rgba(167,139,250,.15),rgba(34,211,238,.15));background-color:var(--bg1);color:var(--txt);display:grid;place-items:center;overflow:hidden}
+  .wrap{width:min(92vw,740px);text-align:center;position:relative}
+  .card{backdrop-filter:saturate(140%) blur(12px);background:linear-gradient(180deg,rgba(17,24,39,.55),rgba(17,24,39,.35));border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:32px 28px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
+  .brand{display:flex;gap:16px;align-items:center;justify-content:center}
+  .logo{position:relative;width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,rgba(34,211,238,.25),rgba(167,139,250,.25));border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;overflow:hidden}
+  .logo::before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent 0 40%,rgba(34,211,238,.6) 50%,transparent 60%);animation:spin 2.2s linear infinite}
+  .logo span{position:relative;font-weight:800;font-size:28px;letter-spacing:.5px;color:white;text-shadow:0 4px 16px rgba(34,211,238,.25)}
+  h1{margin:14px 0 8px;font-size:clamp(22px,3.4vw,34px);line-height:1.15}
+  p{margin:0 auto 18px;max-width:54ch;color:var(--muted);font-size:clamp(14px,1.9vw,16px)}
+  .bar{height:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;overflow:hidden;position:relative}
+  .fill{height:100%;width:0%;background:linear-gradient(90deg,var(--acc),var(--acc2));box-shadow:0 0 24px rgba(34,211,238,.35);transition:width .12s ease}
+  .dots{display:flex;justify-content:center;gap:8px;margin:16px 0 0}
+  .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);animation:pulse 1.4s ease-in-out infinite}
+  .dot:nth-child(2){animation-delay:.18s}
+  .dot:nth-child(3){animation-delay:.36s}
+  .actions{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{appearance:none;border:none;border-radius:12px;padding:10px 14px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+  .primary{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#0b0f1a;box-shadow:0 8px 20px rgba(34,211,238,.25)}
+  .ghost{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.18)}
+  .grid-bg{position:absolute;inset:-200px -200px;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:38px 38px,38px 38px;mask-image:radial-gradient(60% 60% at 50% 50%,black,transparent 80%);pointer-events:none}
+  .shine{position:absolute;inset:-40px;background:radial-gradient(600px 600px at var(--mx,50%) var(--my,50%),rgba(34,211,238,.08),transparent 60%);filter:blur(14px);pointer-events:none}
+  @keyframes spin{to{transform:rotate(1turn)}}
+  @keyframes pulse{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1)}}
+  @media (prefers-reduced-motion:reduce){
+    .logo::before{animation:none}
+    .dot{animation:none}
+    .fill{transition:none}
+  }
+</style>
 </head>
 <body>
-  <h2>Sedang mengalihkan ke LamSTech...</h2>
-  <p>Jika tidak otomatis, silakan klik 
-     <a href="https://lamstech.vercel.app">di sini</a>.
-  </p>
+<div class="wrap">
+  <div class="grid-bg"></div>
+  <div class="shine"></div>
+  <div class="card" role="status" aria-live="polite">
+    <div class="brand">
+      <div class="logo"><span>L</span></div>
+      <div>
+        <h1>Mengalihkan ke LamsTech</h1>
+        <p>Sebentar ya, kami sedang menyiapkan jalur terbaik untukmu.</p>
+      </div>
+    </div>
+    <div class="bar" aria-hidden="true"><div class="fill" id="fill"></div></div>
+    <div class="dots" aria-hidden="true">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://lamstech.vercel.app" id="cta">Buka Sekarang</a>
+      <a class="btn ghost" href="https://lamstech.vercel.app" rel="noopener">Jika tidak otomatis</a>
+    </div>
+  </div>
+</div>
+<script>
+  const target="https://lamstech.vercel.app";
+  const fill=document.getElementById("fill");
+  const shine=document.querySelector(".shine");
+  let t=0;
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  const step=ts=>{
+    t=Math.min(1,(performance.now()-start)/900);
+    fill.style.width=(ease(t)*100).toFixed(2)+"%";
+    if(t<1) requestAnimationFrame(step);
+  };
+  const start=performance.now();
+  requestAnimationFrame(step);
+  const go=()=>{try{location.replace(target)}catch(e){location.href=target}};
+  setTimeout(go,950);
+  document.getElementById("cta").addEventListener("click",e=>{e.preventDefault();go()});
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden) go()});
+  window.addEventListener("pointermove",e=>{
+    const r=e.currentTarget.documentElement.getBoundingClientRect();
+    document.documentElement.style.setProperty("--mx",e.clientX+"px");
+    document.documentElement.style.setProperty("--my",e.clientY+"px");
+  },{passive:true});
+</script>
 </body>
 </html>
