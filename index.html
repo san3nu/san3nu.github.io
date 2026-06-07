@@ -1,88 +1,461 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="3; url=https://lamstech.vercel.app">
-<title>Mengalihkan ke LamsTech...</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{--bg1:#0f172a;--bg2:#111827;--acc:#22d3ee;--acc2:#a78bfa;--txt:#e5e7eb;--muted:#9ca3af}
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 1200px at 80% 20%,#1f2937 0%,transparent 60%),conic-gradient(from 220deg at 50% 50%,rgba(34,211,238,.15),rgba(167,139,250,.15),rgba(34,211,238,.15));background-color:var(--bg1);color:var(--txt);display:grid;place-items:center;overflow:hidden}
-  .wrap{width:min(92vw,740px);text-align:center;position:relative}
-  .card{backdrop-filter:saturate(140%) blur(12px);background:linear-gradient(180deg,rgba(17,24,39,.55),rgba(17,24,39,.35));border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:32px 28px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
-  .brand{display:flex;gap:16px;align-items:center;justify-content:center}
-  .logo{position:relative;width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,rgba(34,211,238,.25),rgba(167,139,250,.25));border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;overflow:hidden}
-  .logo::before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent 0 40%,rgba(34,211,238,.6) 50%,transparent 60%);animation:spin 2.2s linear infinite}
-  .logo span{position:relative;font-weight:800;font-size:28px;letter-spacing:.5px;color:white;text-shadow:0 4px 16px rgba(34,211,238,.25)}
-  h1{margin:14px 0 8px;font-size:clamp(22px,3.4vw,34px);line-height:1.15}
-  p{margin:0 auto 18px;max-width:54ch;color:var(--muted);font-size:clamp(14px,1.9vw,16px)}
-  .bar{height:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;overflow:hidden;position:relative}
-  .fill{height:100%;width:0%;background:linear-gradient(90deg,var(--acc),var(--acc2));box-shadow:0 0 24px rgba(34,211,238,.35);transition:width .12s ease}
-  .dots{display:flex;justify-content:center;gap:8px;margin:16px 0 0}
-  .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);animation:pulse 1.4s ease-in-out infinite}
-  .dot:nth-child(2){animation-delay:.18s}
-  .dot:nth-child(3){animation-delay:.36s}
-  .actions{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .btn{appearance:none;border:none;border-radius:12px;padding:10px 14px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-  .primary{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#0b0f1a;box-shadow:0 8px 20px rgba(34,211,238,.25)}
-  .ghost{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.18)}
-  .grid-bg{position:absolute;inset:-200px -200px;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:38px 38px,38px 38px;mask-image:radial-gradient(60% 60% at 50% 50%,black,transparent 80%);pointer-events:none}
-  .shine{position:absolute;inset:-40px;background:radial-gradient(600px 600px at var(--mx,50%) var(--my,50%),rgba(34,211,238,.08),transparent 60%);filter:blur(14px);pointer-events:none}
-  @keyframes spin{to{transform:rotate(1turn)}}
-  @keyframes pulse{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1)}}
-  @media (prefers-reduced-motion:reduce){
-    .logo::before{animation:none}
-    .dot{animation:none}
-    .fill{transition:none}
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lamstech Has Moved</title>
+  <meta name="description" content="Website ini telah dipindahkan ke website resmi Lamstech." />
+  <meta name="robots" content="noindex, follow" />
+
+  <meta http-equiv="refresh" content="5; url=https://lamstech.com/" />
+
+  <style>
+    :root {
+      --primary-blue: #2563EB;
+      --accent-blue: #38BDF8;
+      --deep-navy: #0F172A;
+      --soft-blue: #EFF6FF;
+      --neutral-gray: #64748B;
+      --light-gray: #F8FAFC;
+      --white: #FFFFFF;
+      --border: #E2E8F0;
+      --shadow: 0 24px 80px rgba(15, 23, 42, 0.10);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--deep-navy);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.12), transparent 34%),
+        linear-gradient(180deg, var(--white), var(--light-gray));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 980px;
+      position: relative;
+    }
+
+    .background-grid {
+      position: absolute;
+      inset: -40px;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(100, 116, 139, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 116, 139, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at center, black, transparent 72%);
+      pointer-events: none;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+
+    .content {
+      padding: 64px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 28px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 48px rgba(37, 99, 235, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.34), transparent 26%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.20), transparent 48%);
+    }
+
+    .logo-mark {
+      width: 54%;
+      height: 54%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-mark::before,
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      background: var(--white);
+      border-radius: 999px;
+      transform-origin: left center;
+    }
+
+    .logo-mark::before {
+      width: 68%;
+      height: 18%;
+      left: 13%;
+      bottom: 17%;
+      transform: rotate(0deg);
+    }
+
+    .logo-mark::after {
+      width: 76%;
+      height: 18%;
+      left: 18%;
+      bottom: 18%;
+      transform: rotate(-58deg);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--primary-blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+      box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.12);
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+      color: var(--deep-navy);
+    }
+
+    .subtitle {
+      max-width: 690px;
+      margin: 24px auto 0;
+      font-size: clamp(17px, 2vw, 20px);
+      line-height: 1.75;
+      color: var(--neutral-gray);
+    }
+
+    .subtitle strong {
+      color: var(--deep-navy);
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.28);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 48px rgba(37, 99, 235, 0.34);
+    }
+
+    .button-secondary {
+      color: var(--deep-navy);
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .button-secondary:hover {
+      transform: translateY(-2px);
+      background: var(--light-gray);
+    }
+
+    .redirect-box {
+      margin: 36px auto 0;
+      max-width: 560px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(248, 250, 252, 0.82);
+    }
+
+    .redirect-text {
+      color: var(--neutral-gray);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .countdown {
+      color: var(--primary-blue);
+      font-weight: 800;
+    }
+
+    .progress {
+      width: 100%;
+      height: 8px;
+      margin-top: 14px;
+      border-radius: 999px;
+      background: #E2E8F0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+      animation: progress 5s linear forwards;
+    }
+
+    @keyframes progress {
+      from {
+        width: 100%;
+      }
+      to {
+        width: 0%;
+      }
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      margin: 44px 0 0;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .footer {
+      padding: 28px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      background: rgba(248, 250, 252, 0.74);
+      border-top: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .brand {
+      text-align: left;
+    }
+
+    .brand-name {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--deep-navy);
+    }
+
+    .brand-tagline {
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--neutral-gray);
+    }
+
+    .site-link {
+      font-size: 14px;
+      color: var(--primary-blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 20px 14px;
+      }
+
+      .content {
+        padding: 44px 24px;
+      }
+
+      .logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 24px;
+        margin-bottom: 24px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .footer {
+        padding: 24px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand {
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button,
+      .progress-bar {
+        animation: none;
+        transition: none;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="grid-bg"></div>
-  <div class="shine"></div>
-  <div class="card" role="status" aria-live="polite">
-    <div class="brand">
-      <div class="logo"><span>L</span></div>
-      <div>
-        <h1>Mengalihkan ke LamsTech</h1>
-        <p>Sebentar ya, kami sedang menyiapkan jalur terbaik untukmu.</p>
+  <main class="page">
+    <div class="background-grid" aria-hidden="true"></div>
+
+    <section class="card" aria-label="Lamstech moved notice">
+      <div class="content">
+        <div class="logo" aria-label="Lamstech logo">
+          <div class="logo-mark" aria-hidden="true"></div>
+        </div>
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Lamstech
+        </div>
+
+        <h1>Website Ini Telah Dipindahkan</h1>
+
+        <p class="subtitle">
+          Website ini sudah tidak lagi diperbarui. Silakan kunjungi website resmi
+          <strong>Lamstech</strong> untuk melihat layanan, portofolio, dan informasi terbaru.
+        </p>
+
+        <p class="subtitle">
+          This website is no longer maintained. Please visit the official
+          <strong>Lamstech</strong> website for the latest portfolio, services, and information.
+        </p>
+
+        <div class="actions">
+          <a class="button button-primary" href="https://lamstech.com/" rel="noopener">
+            Kunjungi Lamstech.com
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="button button-secondary" href="https://lamstech.com/portfolio" rel="noopener">
+            Lihat Portofolio
+          </a>
+        </div>
+
+        <div class="redirect-box" role="status" aria-live="polite">
+          <p class="redirect-text">
+            Mengalihkan ke website resmi dalam
+            <span class="countdown" id="countdown">5</span>
+            detik...
+          </p>
+          <p class="redirect-text">
+            Redirecting to the official website in
+            <span class="countdown" id="countdown-en">5</span>
+            seconds...
+          </p>
+
+          <div class="progress" aria-hidden="true">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
       </div>
-    </div>
-    <div class="bar" aria-hidden="true"><div class="fill" id="fill"></div></div>
-    <div class="dots" aria-hidden="true">
-      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-    </div>
-    <div class="actions">
-      <a class="btn primary" href="https://lamstech.vercel.app" id="cta">Buka Sekarang</a>
-      <a class="btn ghost" href="https://lamstech.vercel.app" rel="noopener">Jika tidak otomatis</a>
-    </div>
-  </div>
-</div>
-<script>
-  const target="https://lamstech.vercel.app";
-  const fill=document.getElementById("fill");
-  let t=0;
-  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
-  const step=ts=>{
-    t=Math.min(1,(performance.now()-start)/2600);
-    fill.style.width=(ease(t)*100).toFixed(2)+"%";
-    if(t<1) requestAnimationFrame(step);
-  };
-  const start=performance.now();
-  requestAnimationFrame(step);
-  const go=()=>{try{location.replace(target)}catch(e){location.href=target}};
-  setTimeout(go,2800);
-  document.getElementById("cta").addEventListener("click",e=>{e.preventDefault();go()});
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden) go()});
-  window.addEventListener("pointermove",e=>{
-    document.documentElement.style.setProperty("--mx",e.clientX+"px");
-    document.documentElement.style.setProperty("--my",e.clientY+"px");
-  },{passive:true});
-</script>
+
+      <footer class="footer">
+        <div class="brand">
+          <div class="brand-name">Lamstech</div>
+          <div class="brand-tagline">Technology Partner for Businesses</div>
+        </div>
+
+        <a class="site-link" href="https://lamstech.com/" rel="noopener">
+          lamstech.com
+        </a>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    const redirectUrl = "https://lamstech.com/";
+    let seconds = 5;
+
+    const countdown = document.getElementById("countdown");
+    const countdownEn = document.getElementById("countdown-en");
+
+    const timer = setInterval(() => {
+      seconds -= 1;
+
+      if (countdown) countdown.textContent = seconds;
+      if (countdownEn) countdownEn.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = redirectUrl;
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
