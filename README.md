@@ -1,10 +1,10 @@
-# LamSTech Developer
+# Lamstech Developer
 
 ## Android & Website Developer
 
-**<https://san3nu.github.io/>**
+**<https://lamstech.com>**
 
 ```text
 Freelance : Available
-WhatsApp  : +62 819 3672 1700
+WhatsApp  : +62 838 3208 7838
 ```
